@@ -298,7 +298,7 @@ void sendmsg(){
     printf("Recipient(use ID) : ");
     scanf("%s", temp.id);
     for(j = 0; j<=MAX; j++){
-    if(!strcmp(temp.id, login[j].id)){
+    if(strcmp(temp.id, login[j].id) != 1){
         printf("message will be sent to : %s", login[j].name);
         printf("\nEnter the message you'd like to send : \n");
         scanf(" %[^\n]%*c", temp.sendmsg);
